@@ -1,7 +1,8 @@
 import json
-
 from .default import *
 
+
+DEBUG = False
 
 with open(REPOSITORY_ROOT + "/config/auth.json") as auth_file:
     AUTH_TOKENS = json.load(auth_file)

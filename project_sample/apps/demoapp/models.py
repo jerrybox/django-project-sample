@@ -15,7 +15,7 @@ class Category(models.Model):
 class Article(models.Model):
     name = models.CharField(max_length=255)
     content = models.TextField()
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
